@@ -3,7 +3,7 @@ package hu.wup.stockmarketapp.data.mapper
 import hu.wup.stockmarketapp.data.local.CompanyListingEntity
 import hu.wup.stockmarketapp.domain.model.CompanyListing
 
-fun CompanyListingEntity.toCompanyListing(): CompanyListing {
+fun CompanyListingEntity.convertFromEntityToCompanyListing(): CompanyListing {
     return CompanyListing(
         name = name,
         symbol = symbol,
@@ -11,7 +11,7 @@ fun CompanyListingEntity.toCompanyListing(): CompanyListing {
     )
 }
 
-fun CompanyListing.toCompanyListingEntity(): CompanyListingEntity {
+fun CompanyListing.convertFromCompanyListingToEntity(): CompanyListingEntity {
     return CompanyListingEntity(
         name = name,
         symbol = symbol,
